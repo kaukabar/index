@@ -110,14 +110,15 @@
     <script> 
         function checkPassword() { 
             const password = document.getElementById('password').value; 
-            const correctPassword = "the1"; 
+            const correctPassword = "davibrito"; 
             if (password === correctPassword) { 
                 document.body.innerHTML = `
                     <div id="balloon-container"></div> 
                     <div class="content"> 
-                        <h1>FELIZ ANIVERSÁRIO MEU LINDO</h1>
-                        <p>Eu era como um suicida jogando roleta russa em um parque de diversões abandonado...</p>
-                        <p><b>feliz aniversário senhor lucas araujo fernandes...</b></p>
+                        <h1>FELIZ NATAL É PAVE OU PA COMER </h1>
+                        <p>Amigos, venho por meio desta mensagem que não leva a lugar nenhum informar absolutamente nada. Hoje acordei com a sensação de que uma geladeira poderia facilmente ser um sentimento, e sinceramente concordei comigo mesma. O café estava quente, mas a ideia era fria, tipo terça-feira às 15h47 quando ninguém sabe mais quem é. Se alguém encontrar meu foco, ele estava usando meia de cores diferentes e dizendo “já volto”, mas nunca voltou. </p>
+                        <p><b>Enfim, sigam bebendo água, desconfiem de pombos muito educados, discutam com objetos inanimados quando necessário e lembrem-se: se nada fizer sentido, parabéns, vocês entenderam tudo.</b></p>
+                        <p> Ah, e no meio desse nada todo: eu gosto de vocês. Mesmo assim. 💛</p>
                     </div>`;
                 startBalloons(); 
                 addMusic();
@@ -144,14 +145,16 @@
         }
 
         function addMusic() { 
-            const iframe = document.createElement('iframe');
-            iframe.width = "560";
-            iframe.height = "315";
-            iframe.src = "https://www.youtube.com/embed/cZb-ubdscvA?autoplay=1";
-            iframe.frameBorder = "0";
-            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-            iframe.allowFullscreen = true;
-            document.body.appendChild(iframe);
+          
+
+    const iframe = document.createElement('iframe');
+    iframe.width = "0";
+    iframe.height = "0";
+    iframe.src = "https://www.youtube.com/embed/NVu8PMtQ6ms?autoplay=1&loop=1&playlist=NVu8PMtQ6ms";
+    iframe.frameBorder = "0";
+    iframe.allow = "autoplay; encrypted-media";
+    iframe.style.display = "none"; // fica invisível
+    document.body.appendChild(iframe);
         }
     </script> 
 </head> 
