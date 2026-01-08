@@ -146,15 +146,30 @@
 
         function addMusic() { 
           
+    const btn = document.createElement("button");
+    btn.innerText = "▶️ TOCAR MÚSICA";
+    btn.style.position = "fixed";
+    btn.style.bottom = "20px";
+    btn.style.right = "20px";
+    btn.style.padding = "12px 20px";
+    btn.style.fontSize = "16px";
+    btn.style.borderRadius = "8px";
+    btn.style.border = "none";
+    btn.style.background = "#ff0055";
+    btn.style.color = "#fff";
+    btn.style.cursor = "pointer";
+    btn.style.zIndex = "9999";
 
-    const iframe = document.createElement('iframe');
-    iframe.width = "0";
-    iframe.height = "0";
-    iframe.src = "https://www.youtube.com/embed/NVu8PMtQ6ms?autoplay=1&loop=1&playlist=NVu8PMtQ6ms";
-    iframe.frameBorder = "0";
-    iframe.allow = "autoplay; encrypted-media";
-    iframe.style.display = "none"; // fica invisível
-    document.body.appendChild(iframe);
+    btn.onclick = () => {
+        const iframe = document.createElement("iframe");
+        iframe.src = "https://www.youtube.com/embed/NVu8PMtQ6ms?autoplay=1";
+        iframe.allow = "autoplay; encrypted-media";
+        iframe.style.display = "none";
+        document.body.appendChild(iframe);
+        btn.remove();
+    };
+
+    document.body.appendChild(btn);
         }
     </script> 
 </head> 
